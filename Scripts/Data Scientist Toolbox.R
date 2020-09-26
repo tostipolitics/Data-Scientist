@@ -53,3 +53,8 @@ View(example)
 #Abrir muchos proyectos al tiempo
 ##Open Project in New Session
 
+#R Markdown
+install.packages("rmarkdown")
+
+
+

@@ -1,0 +1,20 @@
+CONFIGURAR GIT 
+git config --global user.name "Jane Doe"
+git config --global user.email janedoe@gmail.com
+git config --list
+exit
+
+
+PASAR PROYECTO LOCAL A GITHUB
+pwd
+cd hasta llegar a la carpeta del proyecto
+ls
+ls -l
+git init
+git add .
+git commit -m “primer commit”
+
+Crear el proyecto con el mismo nombre en Git Hub sin readme
+
+Copiar líneas de cóldigo en push existing repository
+

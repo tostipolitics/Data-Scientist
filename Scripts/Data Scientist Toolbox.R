@@ -1,3 +1,6 @@
+# Ctrl + Enter         -- correr el código de una línea
+# Ctrl + Shift + Enter -- correr todo el código
+
 #Versión R
 version
 sessionInfo()
@@ -55,6 +58,12 @@ View(example)
 
 #R Markdown
 install.packages("rmarkdown")
-
-
-
+#Negrilla -- **texto**
+#Itálica -- "texto*
+#Tachar      -- ~~texto~~
+#Título      -- #      
+#Subtítulo   -- ##
+#Subtítulo 2 -- ###
+#Bullet points - + espacio + texto + 2 espacios
+# Ctrl + Alt + i -- Insertar código en R maarkdown
+#Links       - [links](link)

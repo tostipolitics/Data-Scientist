@@ -12,6 +12,10 @@ updateR()
 
 #Ver directorio
 getwd()
+dir()
+
+#Cambiar directorio directamente en R
+#File--dir
 
 #Proyectos en R
 GITHUB

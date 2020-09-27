@@ -10,6 +10,9 @@ install.packages("installr")
 library(installr)
 updateR()
 
+#Ver directorio
+getwd()
+
 #Proyectos en R
 GITHUB
 

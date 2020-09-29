@@ -1,6 +1,14 @@
 # Ver cuáles variables tengo
 source()
 
+#Valores faltantes
+is.na()#valores faltantes que tienen una clase, operaciones matemáticas infedinidas
+is.nan()#valores faltantes que la convergencia es falsa
+x<-c(1,2,NA,10,3,NaN)
+is.na(x)
+is.nan(x)
+
+
 # Assignment operator 
 x<-1:20
 msg<-"hello"
@@ -83,6 +91,65 @@ glm()
 
 #Atributos
 attributes()
+
+#Data frames
+row.names()#atributo especial como el ID del sujeto
+read.table()
+read.csv()#crear tabla
+data.matrix()#convertir data frame en matriz
+x<-data.frame(food=1:4,bar=c(T,T,F,F))
+x
+nrow(x)
+ncol(x)
+
+#Atribuir nombres
+x<-1:3
+names(x)
+names(x)<-c("foo","bar","norf")
+names(x)#Lo objetos de R pueden tener nombres, lo cual es útil para escribir código comprensible
+x<-list(a=1,b=2,c=3)
+x#Las listas también pueden tener nombres
+m<-matrix(1:4,nrow = 2,ncol = 2)
+dimnames(m)<-list(c("a","b"),c("c","d"))
+m#las matrices pueden tener nombres
+
+#Leer datos en R
+read.table()
+read.csv()#leer datos tabulares
+readLines()#leer líneas de un documento de texto
+source()
+dget()#leer archivos de código en R
+load()#leer en espacios de trabajo guardados
+unserialize()#leer objetos sencillos de R en forma binaria
+initial<-read.table("datatable.txt",nrows = 100)
+classes<-sapply(initial,class)
+tabALL<-read.table(colClasses = classes)#leer grandes bases de datos
+
+#Escribir datos en R
+write.table()
+writeLines()
+dump()
+dput()
+save()
+serialize()
+
+#Formatos de texto
+y<-data.frame(a=1,b="a")
+dput(y)
+dput(y,file = "y.R")
+new.y<-dget("y.R")
+new.y#dput usado en un solo objeto
+x<-"foo"
+y<-data.frame(a=1,b="a")
+dump(c("x","y"),file = "data.R")
+rm(x,y)
+source("data.R")
+y
+x#dump usado en varios objetos
+
+
+
+
 
 
 

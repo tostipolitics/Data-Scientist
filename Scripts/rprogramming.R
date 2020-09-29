@@ -219,9 +219,38 @@ x[["a"]]#no funciona
 x[["a",exact=F]]#aproximación
 
 
-#Subconjuntos de valores faltantes
+#Eliminar valores faltantes
+x<-c(1,2,NA,4,NA,5)
+bad<-is.na(x)#crea lista V y F
+x[!bad]#extrae los valores F
+x<-c(1,2,NA,4,NA,5)
+y<-c("a","b",NA,"d",NA,"f")
+good<-complete.cases(x,y)
+good
+x[good]
+y[good]#cuando hay múltiples cosas y se quieren eliminar los valores faltantes
+airquality[1:6,]
+good<-complete.cases(airquality)
+airquality[good,][1:6,]
 
 
+#Operaciones vectorizadas: tareas en paralelo
+x<-1:4;y<-6:9
+x>2
+x>=2
+y==8
+x+y#(x1+y1,x2+y2...)
+x*y#(x1*y1,x2*y2...)
+x/y#(x1/y1,x2/y2...)
+
+
+#Operaciones vectorizadas con matrices
+x<-matrix(1:4,2,2);y<-matrix(rep(10,4),2,2)
+x
+y
+x*y
+x/y
+x%*%y#verdadera multiplicación de matrices
 
 
 

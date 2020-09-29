@@ -18,6 +18,9 @@ quiz1[,1]
 #Extraer dato [n,m]
 quiz1[1,1]
 
+#Extraer últimos datos
+tail(quiz1)
+
 #contar columnas y filas
 ncol(quiz1);nrow(quiz1)
 
@@ -46,4 +49,3 @@ filter(quiz)
 
 
 #Sacar media con un condicional
-

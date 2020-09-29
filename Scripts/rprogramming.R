@@ -148,6 +148,84 @@ y
 x#dump usado en varios objetos
 
 
+#Interfaces con el mundo externo
+file()#abre una conexión con un archivo
+gzfile()#abre una conexión con un archivo comprimido con gzip
+bzfile()#abre una conexión con un archivo comprimido con bzip2
+url()#abre una conexión con una página web
+str(file)# "r"=leer/"w"=escribir/"a"=añadir/"rb"-"wb"-"ab"-código binario
+con<-file("archivo","r")
+data<-read.csv(con)
+close(con)
+#lo anterior es igual a:
+data<-read.csv("archivo")
+
+
+#Leer líneas 
+con<-gzgile("words.gz")
+x<-readLines(con,10)
+x#documento de texto
+con<-url("http://www.jhsph.edu","r")
+x<-readLines(con)
+head(x)#página web
+
+
+#Subconjuntos básicos
+x<-c("a","b","c","c","d","a")
+x[1]
+x[2]
+x[1:4]
+x[x>"a"]
+u<- x >"a"#lógica
+u#devuelve objetos de la misma clase que la original
+
+
+#Subconjuntos listas
+x<-list(foo=1:4,bar=0.6)
+x[1]#extrae una lista
+x[[1]]#es solo una secuencia
+x$bar
+x[["bar"]]
+x["bar"]#extrae el elemento del nombre
+x<-list(foo=1:4,bar=0.6,baz="hello")
+x[c(1,3)]#extraer múltiples elementos de una lista []\
+x<-list(foo=1:4,bar=0.6,baz="hello")
+name<-"foo"
+x[[name]]#índice computado para "foo" [[]]
+x$name#elemento name no existe
+x$foo#elemento "foo" no existe
+x<-list(a=list(10,12,14),b=c(3.14,2.81))
+x[[c(1,3)]]
+x[[1]][[3]]
+x[[c(2,1)]]#extraer un único elemento
+
+
+#Subconjuntos de matrices (i,j)
+x<-matrix(1:6,2,3)
+x
+x[1,2]
+x[2,1]
+x[1,]
+x[,2]
+a[1,2]#devuelve un vector de largo 1
+x[1,2,drop=F]
+x[1,,drop=F]#devuelve una matriz de 1x1/1X3
+
+
+#Subconjuntos: emparejamiento parcial (ahorrar tiempo)
+x<-list(aardvark=1:5)
+x$a#busca un nombre que se empareje a la letra
+x[["a"]]#no funciona
+x[["a",exact=F]]#aproximación
+
+
+#Subconjuntos de valores faltantes
+
+
+
+
+
+
 
 
 

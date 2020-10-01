@@ -44,8 +44,8 @@ quiz1nona#forma 2
 #Sacar media de una columna (también aplica para las demás operaciones aritméticas)
 colMeans(quiz1nona[1])#de una columna en específico
 colMeans(quiz1nona)#de todas las columnas
-filter(quiz)
-
 
 
 #Sacar media con un condicional
+filter(quiz1nona,"Ozone">31&"Temp">90)
+quiznona1

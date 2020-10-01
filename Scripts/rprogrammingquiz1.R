@@ -48,4 +48,4 @@ colMeans(quiz1nona)#de todas las columnas
 
 #Sacar media con un condicional
 filter(quiz1nona,"Ozone">31&"Temp">90)
-quiznona1
+

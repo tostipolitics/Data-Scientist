@@ -7,6 +7,7 @@
 ^      #elevado
 sqrt() #raíz cuadrada
 
+#------------------------------------------------------------------------------
 
 #SWIRL Lesson 2: Workspace and Files
 
@@ -56,4 +57,74 @@ dir.create(file.path('testdir2', 'testdir3'), recursive = T)
 
 #Ver argumentos de una función
 args(funcion)
+
+#-----------------------------------------------------------------------------
+
+#SWIRL Lesson 3: Sequences of Numbers
+
+#Secuencia de números
+1:20
+pi:10#incrementos/decrementos de 1 a 1
+15:1
+
+#Ayuda con operadores
+?':'
+
+#Mayor control sobre la secuencia
+seq(1,20)
+seq(0,10,by=0.5)#incrementos de a 0.5
+seq(5,10,length=30)#secuencia de n#
+
+#Largo de una variable
+length()
+
+#Generar secuencia desde # a n de la variable 
+1:length(my_seq)#forma 1
+seq(along.with = my_seq)#forma 2
+seq_along(my_seq)#forma 3:más sencilla
+
+#Repetir una secuencia
+rep(0, times = 40)#vector con 40 ceros
+rep(c(0, 1, 2),times=10)#vector que repite n veces un vector
+rep(c(0, 1, 2), each = 10)#10 ceros, 10 unos, 10 dos
+
+#------------------------------------------------------------------------------
+
+#SWIRL Lesson 5: Vectors
+
+#Atómicos
+#1.Numéricos
+num_vect<-c(0.5,55,-10,6)
+
+#2.Enteros
+
+#3.Complejos
+
+#4.Caracteres
+my_char<-c("My","name","is")
+paste(my_char,collapse = " ")#unir en uno solo
+my_name<-c(my_char,"Juan")#adicionar caracteres
+paste("Hello","world!",sep = " ")#unir con caracteres que los separen
+
+#5.Lógicos (V, F o NA)
+tf<- num_vect<1
+num_vect>=6
+
+#Operadores lógicos
+'<' 
+'<='
+'>'
+'>='
+'=='
+'!='
+'&'
+'|'#or
+'!'#negation
+
+#Listas
+paste(1:3,c("X","Y","Z"),sep = "")#operar y unir sin espacios, se recicla o repite el vector más pequeño
+
+#------------------------------------------------------------------------------
+
+#SWIRL Lesson 6: Missing Values
 

@@ -90,7 +90,7 @@ rep(c(0, 1, 2), each = 10)#10 ceros, 10 unos, 10 dos
 
 #------------------------------------------------------------------------------
 
-#SWIRL Lesson 5: Vectors
+#SWIRL Lesson 4: Vectors
 
 #Atómicos
 #1.Numéricos
@@ -126,5 +126,20 @@ paste(1:3,c("X","Y","Z"),sep = "")#operar y unir sin espacios, se recicla o repi
 
 #------------------------------------------------------------------------------
 
-#SWIRL Lesson 6: Missing Values
+#SWIRL Lesson 5: Missing Values
+
+#Muestra de un conjunto de datos
+my_data<-sample(c(y,z),100)
+
+#Cantidad de NAs
+my_na<-is.na(my_data)#T los cuenta como 1 y F los cuenta como 0
+sum(my_na)
+
+#NaN no es un número o es indefinido
+0/0
+Inf-Inf
+
+#------------------------------------------------------------------------------
+
+#SWIRL Lesson 6: Subsetting Vectors
 

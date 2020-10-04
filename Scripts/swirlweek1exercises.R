@@ -141,5 +141,34 @@ Inf-Inf
 
 #------------------------------------------------------------------------------
 
-#SWIRL Lesson 6: Subsetting Vectors
+#SWIRL Lesson 6: Subsetting Vectors (extraer elementos de un vector de acuerdo con unas condiciones)
+x[1:10]
 
+#Vectores lógicos
+x[x > 0]
+x[is.na(x)]#NAs
+y <- x[!is.na(x)]#No NAs
+x[!is.na(x) & x > 0]#quitar NAs y extraer elementos positivos
+x[c(3,5,7)]#extraer ciertos elementos
+
+
+#Vectores con enteros positivos
+y[y > 0]#elementos positivos
+
+#Extraer elemento X del índice
+x[0]
+x[3000]
+
+#Vectores con enteros negativos
+x[c(-2,-10)]
+x[-c(2, 10)]#eliminar ciertos elementos
+
+#Vectores con caracteres
+vect <- c(foo = 11, bar = 2, norf = NA)
+vect
+names(vect)
+vect2<-c(11, 2, NA)
+names(vect2)<-c("foo", "bar", "norf")#asignar nombres
+identical(vect,vect2)#mirar si dos funciones son idénticas 
+vect["bar"]
+vect[c("foo", "bar")]

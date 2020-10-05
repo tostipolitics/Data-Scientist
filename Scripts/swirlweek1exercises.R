@@ -172,3 +172,35 @@ names(vect2)<-c("foo", "bar", "norf")#asignar nombres
 identical(vect,vect2)#mirar si dos funciones son idénticas 
 vect["bar"]
 vect[c("foo", "bar")]
+
+#Largo de un vector
+my_vector<-1:20
+length(my_vector)
+
+#-------------------------------------------------------------------------------
+
+#SWIRL Lesson 7: Matrices and Data Frames
+
+#Matriz: contiene solo un tipo de datos
+#Atribuir una dimensión a un vector  o convertir en matriz
+dim(my_vector)<-c(4,5)#4 filas y 5 columnas
+dim(my_vector)
+attributes(my_vector)
+class(my_vector)
+my_matrix<-my_vector
+
+#Crear matriz
+my_matrix2<-matrix(1:20,nrow = 4,ncol = 5)
+
+#Agregar columna
+patients<-c("Bill","Gina","Kelly","Sean")
+cbind(patients,my_matrix)#coerción implícita de los caracteres sobre los números
+
+#Data Frame: contiene varios tipos de datos
+my_data<-data.frame(patients,my_matrix)
+class(my_data)
+
+#Asignar nombres a las columnas
+cnames<-c("patient","age","weight","bp","rating","test")
+colnames(my_data)<-cnames
+

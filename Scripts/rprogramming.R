@@ -252,12 +252,33 @@ x*y
 x/y
 x%*%y#verdadera multiplicación de matrices
 
+#-----------------------------------------------------------------------------
 
+#Week 2: R programming
 
+#If-else: evaluar una condición lógica
+if("condición){#hacer algo}else{#hacer algo más}
+if("condición1"){#hacer algo}else if("condición2"){#hacer algo diferente}else{#hacer algo diferente}
+x<-2
+if(x>3){y<-10}else{y<-0}
+y<-if(x>3){10}else{0}#el else no siempre es necesario y no haría nada en caso de ser falso
 
+#For:ejecutar un bucle cierto número de veces
+for(i in 1:10){print(i)}
+x<-c("a","b","c","d")
+for(i in 1:4){print(x[i])}
+for(i in seq_along(x)){print(x[i])}
+for(letter in x){print(letter)}
+for(i in 1:4)print(x[i])
 
+#For anidados
+x<-matrix(1:6,2,6)
+for(i in seq_len(nrow(x))){for(j in seq_len(ncol(x))){print(x[i,j])}
 
+#While
 
+#Repeat
 
+#Next
 
-
+#Break

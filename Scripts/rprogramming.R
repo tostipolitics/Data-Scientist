@@ -275,10 +275,27 @@ for(i in 1:4)print(x[i])
 x<-matrix(1:6,2,6)
 for(i in seq_len(nrow(x))){for(j in seq_len(ncol(x))){print(x[i,j])}
 
-#While
+#While: ejecutar un bucle si se cumple una condición
+count<-0
+while(count<10){print(count<-count+1)}
+z<-5
+while(z<=3 & z<=10){print(z)}
+z
 
-#Repeat
+#Repeat and break: iniciar y parar un bucle infinito
+x0 <- 1
+tol <- 1e-8
+repeat{
+        x1 <- 5
+        if(abs(x1-x0)<tol){
+        break
+        }else{x0<-x1}
+        }
+#Next: usado para saltarse un bucle
+for(i in 1:10){
+  if(i<-20){#saltarse las primeras 20 iteraciones
+            next
+            } #hacer algo
+#Return: salir de una función y devuelve algún valor
 
-#Next
 
-#Break

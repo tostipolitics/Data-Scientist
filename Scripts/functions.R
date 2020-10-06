@@ -30,4 +30,28 @@ columnmean<-function(y,removeNA=T){
 columnmean(airquality)
 columnmean(airquality,F)
 
+#----------------------------------------------------------------------------------------
+
+#Funciones: transición del usuario de R a programador
+
+f<-function(<argumento>){
+  ##hacer algo
+}
+
+#Coincidencia de funciones: lor agumentos de las funciones pueden coincidir posicionalmente o por nombre
+#todas estas sd son equivalentes
+mydata<-rnorm(100)
+sd(mydata)
+sd(x=mydata)
+sd(x=mydata,na.rm = F)
+sd(na.rm = F,x=mydata)
+sd(na.rm = F,mydata)
+#lm equivalentes
+lm(data=mydata,y-x,model = F,1:100)
+lm(y-x,mydata,1:100,model = F)
+#Combinar coincidencia posicional y por nombre
+args(lm)
+
+
+
 

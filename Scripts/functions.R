@@ -53,5 +53,24 @@ lm(y-x,mydata,1:100,model = F)
 args(lm)
 
 
+#Definir una función: argumentos y valor
+f<-function(a,b=1,c=2,d=NULL){
+  
+}
 
 
+#Evaluación perezosa: se salta la función 
+f<-function(a,b){
+  a^2
+}
+f(2)#se salta b
+f<-function(a,b){
+  print(a)
+  print(b)
+}
+f(45)#error en b
+
+
+#The ... Argument: no se conoce el número de argumentos
+args(paste)
+args(cat)

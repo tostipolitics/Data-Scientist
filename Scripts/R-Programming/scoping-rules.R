@@ -39,3 +39,37 @@ g<-function(x){
   x*y
 }
 f(3)
+
+
+#Optimización: el argumento es un vector de parámetros
+make.NegLogLik<-function(data,fixed=c(F,F)){
+  params<-fixed
+  function(p){
+    para[!fixed]<-p
+    nu<-params[1]
+    sigma<-params[2]
+    a<- -0.5*length(data)*log(2*pi*sigma*2)
+    b<- -0.5*sum((data-mu)*2)/(sigma*2)
+    -(a+b)
+  }
+}#constructor, se usa el símbolo negativo para minimizar
+set.seed(1);normals<-rnorm(100,1,2)
+nLL<-make.NegLogLik(normals)
+nLL
+function(p){
+  para[!fixed]<-p
+  nu<-params[1]
+  sigma<-params[2]
+  a<- -0.5*length(data)*log(2*pi*sigma*2)
+  b<- -0.5*sum((data-mu)*2)/(sigma*2)
+  -(a+b)
+}
+ls(environment((nLL)))#maximizar una distribución normal
+
+
+#Estimar parámetros
+optim(c(mu=0,sigma=1),nLL)$par
+
+nLL<-make.NegLogLik(normals,c(F,2))
+optimize(nLL,c(-1,3))$minimun
+

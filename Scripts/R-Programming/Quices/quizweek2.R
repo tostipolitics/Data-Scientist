@@ -55,6 +55,4 @@ h <- function(x, y = NULL, d = 3L) {
 #9. What is one of the consequences of the scoping rules used in R?: all objects must be stored in memory
 
 #10. In R, what is the parent frame?: it is always a global environment, is the package search list, function was defined
-
-
 MAL

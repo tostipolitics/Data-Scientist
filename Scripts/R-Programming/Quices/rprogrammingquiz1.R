@@ -1,4 +1,4 @@
-#Quiz 1 R Programming
+#Quiz 1 
 
 #Convertir base de datos
 quiz1<-hw1_data

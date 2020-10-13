@@ -286,3 +286,49 @@ mad_libs <- function(...){
 }
 "I" %p% "love" %p% "R!"
 
+#-------------------------------------------------------------------------------
+
+#3. Dates and times
+
+#Fecha actual
+d1<-Sys.Date()
+d1
+class(d1)
+unclass(d1)#número de días desde 1971-01-01
+
+#Asignar fecha antes de 1971
+d2<-as.Date("1969-01-01")
+unclass(d2)
+
+#Hora actual
+t1<-Sys.time()#POSIXct por default
+t1
+class(t1)
+unclass(t1)#segundos desde 1970
+
+#Coerción de la fecha a POSIXlt
+t2<-as.POSIXlt(Sys.time())
+t2
+class(t2)
+unclass(t2)#lista de valores
+str(unclass(t2))
+
+#POSIXlt
+t2$min#extraer minutos
+
+
+#Extraer días, meses y cuartiles
+weekdays(d1)
+months(t1)
+quarters(t2)
+
+#Ajustar formato
+t3<-"October 17, 1986 08:24"
+t4<-strptime(t3, "%B %d, %Y %H:%M")#convierte vector de caracteres en POSIXlt
+t4
+class(t4)
+
+#Operaciones y comparaciones con fechas y horas
+Sys.time()>t1
+Sys.time()-t1#diferencia en minutos
+difftime(Sys.time(),t1,units = 'days')

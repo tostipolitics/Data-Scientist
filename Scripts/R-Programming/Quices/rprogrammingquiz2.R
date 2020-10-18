@@ -25,6 +25,17 @@ pollutantmean <- function(directory, pollutant, id = 1:332) {
   
   mean(means)
 }
+#sprint f muestra como será expresado el número
+#debe ponerse en comillas ""
+#el % va siempre antes
+#la d es un entero regular
+#el 3 muestra cuandos dígitos tendrá el número
+#el 0 antes del 3 muestra que los espacios iniciales deben reemplazarse por 0
+sprintf("%03d",9)
+sprintf("%03d",90)
+sprintf("%03d",900)
+sprintf("%+3d",7) 
+sprintf("%-3d",7)
 
 #-------------------------------------------------------------------------------
 

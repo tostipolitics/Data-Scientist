@@ -32,6 +32,39 @@ sapply(x, mean)
 
 #apply
 # aplica una función sobre una colección de datos, tablas o matrices
+#a. Usualmente aplica una función a las matrices
+#b. Se puede usar con matrices generales
+#c. No es tan rápida como escribir un loop, pero funciona en una línea
+
+str(apply)
+#X es un array es un vector que tiene dimensiones
+#MARGIN es un vector de enteros indicando las márgenes
+#FUN es la función a aplicar
+#... son los argumentos de FUN
+
+x<-matrix(rnorm(200),20,10)
+x
+apply(x,2,mean)#media de las columnas
+apply(x,1,mean)#media de las filas
+
+#col/row sums and means
+#rowSums
+apply(x, 1, sum)
+#rowMeans
+apply(x, 1, mean)
+#colSums
+apply(x, 2, sum)
+#colMeans
+apply(x, 2, mean)
+
+#Calcular quartiles
+x<-matrix(rnorm(200),20,10)
+apply(x,1,quantile,probs=c(0.25,0.75))
+
+#Media de una array
+a<-array(rnorm(2*2*10),c(2,2,10))
+apply(a, c(1,2),mean)
+rowMeans(a,dims = 2)#collapse third dimension
 
 #-------------------------------------------------------------------------------
 

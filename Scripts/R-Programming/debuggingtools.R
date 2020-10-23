@@ -41,6 +41,16 @@ printmessage2(0)
 
 #CONDITION:algo indica que algo inesperado ocurrió, puede crear sus propias condiciones. 
 
+#-------------------------------------------------------------------------------
+
 #b. Herramientas básicas
+#TRACEBACK: imprime el function call stack luego de un error
+#DEBUG: permite la ejecución de una función línea por línea
+#BROWSER: suspende la ejecución de una función donde se diga y prende e modo debug
+#TRACE: permite agregar debugging code en un lugar específico
+#RECOVER: modificar el comportamiento del error 
+#Insertar pinrt/cat statements
+ 
+#-------------------------------------------------------------------------------
 
 #c. Uso de las herramientas

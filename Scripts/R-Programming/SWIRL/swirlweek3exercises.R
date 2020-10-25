@@ -45,5 +45,32 @@ sapply(flags, unique)#lista: vector lenght>1
 sapply(unique_vals, length)
 
 #Obtener un item de un vector
-lapply(unique_vals, function(elem) elem[2])#elem es una variable dummy, función anónima+
+lapply(unique_vals, function(elem) elem[2])#elem es una variable dummy, función anónima
+
+#-------------------------------------------------------------------------------
+
+#2.vapply and tapply
+head(flags)
+dim(flags)
+viewinfo()
+class(flags)
+
+sapply(flags, unique)
+
+#Especificar el formato del resultado
+vapply(flags,unique, numeric(1))#cada elemento del resultado debe ser un vector numérico de largo 1
+ok()
+
+sapply(flags, class)
+vapply(flags, class,character(1))
+
+?tapply#aplicar una función sobre una matriz irregular
+
+table(flags$landmass)
+table(flags$animate)
+
+tapply(flags$animate,flags$landmass, mean)#toma la FUN (mean) de X (animate) de acuerdo con Y (landmass)
+
+tapply(flags$population,flags$red, summary)
+tapply(flags$population,flags$landmass, summary)
 

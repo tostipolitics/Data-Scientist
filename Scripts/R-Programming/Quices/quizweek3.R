@@ -40,8 +40,12 @@ tapply(mtcars$mpg,mtcars$cyl, mean)#SI
 
 #------------------------------------------------------------------------------
 
-#4.
-
+#4.Diferencia caballos de fuerza (hp) 4 y 8 cilindros (cyl)
+hp_by_cyl<-tapply(mtcars$hp,mtcars$cyl, mean)
+abs(hp_by_cyl[1]-hp_by_cyl[3])
 #------------------------------------------------------------------------------
 
 #5.
+debug(ls)
+ls
+undebug(ls)

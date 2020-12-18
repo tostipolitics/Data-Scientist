@@ -1,3 +1,9 @@
+#Tipos de datos en R
+numeric()
+integer()#entero
+logical#T or F
+character()#texto\
+
 # Ver cuáles variables tengo
 source()
 

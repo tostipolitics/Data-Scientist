@@ -1,3 +1,7 @@
+PROGRAMS
+https://www.r-project.org/
+https://rstudio.com/
+
 BLOGS
 https://simplystatistics.org/
 

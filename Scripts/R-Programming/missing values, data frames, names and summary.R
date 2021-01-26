@@ -21,6 +21,8 @@ is.nan(x)
 
 #DATA FRAME: lista especial con elementos del mismo largo
 
+#paquete dplyr
+
 row.names(x)  #nombre de campo
 read.table(x)
 read.csv(x) 
@@ -37,10 +39,11 @@ ncol(x)
 
 #data frame
 x<-1:3
-names(x)
+names(x)    ##column names
 names(x)<-c("foo","bar","norf")
 x
 names(x)
+rownames(x) ##row names
 
 #list
 x<-list(a=1,b=2,c=3)
@@ -49,6 +52,11 @@ x
 #matrix
 m<-matrix(1:4,nrow = 2,ncol = 2)
 dimnames(m)<-(list(c("a","b"),c("c","d")))
+m
+
+#columns and rows matrices
+colnames(m)<-c("h","f")
+rownames(m)<-c("x","z")
 m
 
 #-------------------------------------------------------------------------------

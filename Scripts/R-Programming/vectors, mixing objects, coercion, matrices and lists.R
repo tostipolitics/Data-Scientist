@@ -68,4 +68,5 @@ rbind(x,y)
 
 x<-list(1,"a",T,1+4i)
 x
-
+x<-vector("list",length = 5)
+x

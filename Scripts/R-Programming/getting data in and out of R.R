@@ -33,6 +33,25 @@ unserialize()
 
 #-------------------------------------------------------------------------------
 
+#READING LARGER DATASETS WITH read.table
+
+#CALCULATING MEMORY REQUIREMENTS FOR R OBJECTS
+  ##Is there enough RAM in my computer?
+  ##OS 32 or 64 bit?
+  ##Are there multiple users?\
+    ###rows*columns*8bytes/numeric
+
+#If there are not commented lines in your file
+  ##comment.char=""
+
+initial<-read.table("datatable.txt",nrows = 100)
+classes<-sapply(initial,class)
+tabALL<-read.table("datatable.txt",colClasses = classes)
+
+
+
+#-------------------------------------------------------------------------------
+
 #WRITING DATA
 
 #tabular data
@@ -52,3 +71,6 @@ save()
 serialize()
 
 #-------------------------------------------------------------------------------
+
+
+

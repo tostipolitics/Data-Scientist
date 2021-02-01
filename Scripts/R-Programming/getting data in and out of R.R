@@ -33,6 +33,15 @@ unserialize()
 
 #-------------------------------------------------------------------------------
 
+#READR PACKAGE
+
+#read CSV
+
+library(readr)
+teams <- read_csv("data/team_standings.csv",col_types = "cic")
+
+#-------------------------------------------------------------------------------
+
 #READING LARGER DATASETS WITH read.table
 
 #CALCULATING MEMORY REQUIREMENTS FOR R OBJECTS

@@ -27,5 +27,23 @@ x
 #-------------------------------------------------------------------------------
 
 # BINARY FORMATS
+  ## numeric
+
+# save() - individual R objects
+a <- data.frame(x = rnorm(100), y = runif(100))
+b <- c(3, 4.4, 1/3)
+save(a, b, file = "mydata.rda")
+load("mydata.rda")
+
+# save.image() - multiple objects
+save.image(file = "mydata.Rdata")
+load("mydata.RData")
+
+# serialize() - convertir objetos individuales en un formato binario que puede ser enviado a otra red 
+  ## vector codificado en un formato hexadecimal
+x <- list(1, 2, 3)
+serialize(x, NULL)
+
+
 
 

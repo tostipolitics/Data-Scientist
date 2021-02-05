@@ -32,6 +32,7 @@ x
 con <- url("https://www.instagram.com/")
 x <- readLines(con)
 head(x)
+close(con)
 
 #-------------------------------------------------------------------------------
 
